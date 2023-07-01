@@ -18,18 +18,19 @@ public class Menu {
 		
 		ArchivoServicio archivoServicio = new ArchivoServicio();
 		ProductoServicio productoServicio = new ProductoServicio();
+		Utilidad utilidad = new Utilidad();
 		int opcion;
 		try (Scanner sc = new Scanner(System.in)) {
 			do {
 				opcion = 0;
 				try {
-					System.out.println("\n\t------M E N U------\n");
-					System.out.println("\t[1] Listar Producto");
-					System.out.println("\t[2] Editar Producto");
-					System.out.println("\t[3] Importar Datos");
-					System.out.println("\t[4] Salir");
+					System.out.println("\n\t\t------- M E N U --------\n");
+					System.out.println("\t\t [1] Listar Producto");
+					System.out.println("\t\t [2] Editar Producto");
+					System.out.println("\t\t [3] Importar Datos");
+					System.out.println("\t\t [4] Salir");
 
-					System.out.print("\n\tIngrese la opción: ");
+					System.out.print("\n\t\t Ingrese la opción: ");
 					
 					opcion = Integer.parseInt(sc.nextLine());
 					
@@ -45,8 +46,8 @@ public class Menu {
 					archivoServicio.cargaDatos();
 					break;
 				case 4:
-					System.out.println("saliendo");
-
+					utilidad.tiempoEspera("Estas saliendo del programa", 300);
+					System.out.print("\n\n\t\t< < < FIN DEL PROGRAMA > > >");
 					System.exit(0);
 					break;
 				default:
