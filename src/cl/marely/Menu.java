@@ -24,7 +24,7 @@ public class Menu {
 			do {
 				opcion = 0;
 				try {
-					System.out.println("\n\t>---------<<<-- M E N U -->>>----------<\n");
+					System.out.println("\n\t>-------<<<-- MENU PRINCIPAL-->>>-------<\n");
 					System.out.println("\t\t [1] Listar Producto");
 					System.out.println("\t\t [2] Editar Producto");
 					System.out.println("\t\t [3] Importar Datos");
@@ -47,7 +47,7 @@ public class Menu {
 					break;
 				case 4:
 					utilidad.tiempoEspera("Estas saliendo del programa", 300);
-					System.out.print("\n\n\t\t< < < FIN DEL PROGRAMA > > >");
+					System.out.print("\n\n\t\t< < < FIN DEL PROGRAMA > > >\n\n\n\n");
 					System.exit(0);
 					break;
 				default:

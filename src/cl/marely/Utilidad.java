@@ -4,14 +4,9 @@ import java.util.Scanner;
 
 public class Utilidad {
 	
-	
-	
-	int sleepTimer = 15;
-
 	public void tiempoEspera(String mensaje, int sleepTimer) {
 		System.out.print("\n\n\t\t" + mensaje + "");
 		for (int i = 0; i < 10; i++) {
-			
 			try {
 				System.out.print(".");
 				Thread.sleep(sleepTimer);
@@ -20,7 +15,6 @@ public class Utilidad {
 			}
 		}
 		System.out.println();
-
 	}
 
 
@@ -29,18 +23,6 @@ public class Utilidad {
 		Scanner scx = new Scanner(System.in);
 		System.out.println("\n\n\t---------------------------------------------------------------------------------------------------");
 		System.out.println("                        < < < " + msje + " > > >");
-		System.out.println("\t----------------------------------------------------------------------------------------------------\n\n");
-		
-//		System.out.println("\tPresione una tecla para continuar...");
-//		scx.nextLine();
-		System.out.println("\n\n\n\n");
+		System.out.println("\t----------------------------------------------------------------------------------------------------\n\n\n\n\n");
 	}
-	
-
-	
-
-
-
-	
-
 }
