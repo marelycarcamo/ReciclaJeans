@@ -24,7 +24,7 @@ public class Menu {
 			do {
 				opcion = 0;
 				try {
-					System.out.println("\n\t\t------- M E N U --------\n");
+					System.out.println("\n\t>---------<<<-- M E N U -->>>----------<\n");
 					System.out.println("\t\t [1] Listar Producto");
 					System.out.println("\t\t [2] Editar Producto");
 					System.out.println("\t\t [3] Importar Datos");

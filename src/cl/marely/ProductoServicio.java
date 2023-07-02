@@ -14,6 +14,8 @@ public class ProductoServicio {
 	ArchivoServicio archivoServicio = new ArchivoServicio();
 
 	List<Producto> listaProducto = new ArrayList<Producto>();
+	
+	Utilidad utilidad = new Utilidad();
 
 	public ProductoServicio(List<Producto> listaProducto) {
 		super();
@@ -49,7 +51,8 @@ public class ProductoServicio {
 
 		try {
 			if (listaProducto.isEmpty()) {
-				System.out.println(" . . . La lista se encuentra vacía! . . .");
+				utilidad.mensaje("La lista se encuentra vacía!");
+			
 			} else {
 
 				System.out.println("\n\n\t----------LISTA DE PRODUCTOS-----------\n");
@@ -75,9 +78,6 @@ public class ProductoServicio {
 	 *
 	 * ....................E D I T A R
 	 * 
-	 * @return
-	 * @return
-	 *
 	 ********************************************************************/
 
 	/*
@@ -92,7 +92,7 @@ public class ProductoServicio {
 		Scanner scEditar = new Scanner(System.in);
 			String elCodigo;
 			if (listaProducto.isEmpty()) {
-				System.out.println("\n\t . . . La lista está vacía . . .");
+				utilidad.mensaje("La lista se encuentra vacía!");
 			} else {
 				System.out.println("\n\t--------------------------------------------\n");
 				Producto productoEncontrado = null;
@@ -105,12 +105,11 @@ public class ProductoServicio {
 
 						if (producto.getCodigo().equals(elCodigo)) {
 							productoEncontrado = producto;
-							System.out.println("producto encontrado : " + productoEncontrado);
+							System.out.println("\nPRODUCTO ENCONTRADO : " + productoEncontrado);
 							flag = !flag;
 						}
 					}
-					System.out.println((flag) ? "\n\tCODIGO ENCONTRADO !!\n" : "\n\tEL CODIGO NO EXISTE !!\n");
-
+					utilidad.mensaje((flag) ? "CODIGO ENCONTRADO !!" : "EL CODIGO NO EXISTE !!");
 				} while (productoEncontrado == null);
 
 				int opcion = 0;
@@ -133,8 +132,6 @@ public class ProductoServicio {
 						scEditar.nextLine();
 					}
 				} while (flag == false);
-
-//						actualizaDatos(opcion,productoEncontrado);
 
 				String dato = "";
 				try {
@@ -193,6 +190,9 @@ public class ProductoServicio {
 
 			}
 		}
+	
+	
+	
 
 	}
 

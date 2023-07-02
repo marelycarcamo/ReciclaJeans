@@ -13,6 +13,7 @@ import java.util.StringTokenizer;
 public class ArchivoServicio {
 
 	List<Producto> listaArchivo = new ArrayList<Producto>();	
+	Utilidad utilidad = new Utilidad();
 	
 	
 	public List<Producto> getListaCargada() {
@@ -58,20 +59,23 @@ public class ArchivoServicio {
 						}
 						sc.close();
 					}
-
-					listaArchivo.forEach(x -> System.out.println("\n" + x));
+					utilidad.tiempoEspera("Cargando los datos al sistema",300);
+					System.out.println();
+					listaArchivo.forEach(x -> System.out.println(x));
 //			listaProducto.forEach(x -> System.out.println(x));
 					if (listaArchivo.isEmpty()) {
-						System.out.println("\n\n\t . . . La lista está vacía . . .");
+						utilidad.mensaje("La lista está vacía !");
+						
 					} else {
-						System.out.println("\n\t------------------------------------------");
-						System.out.println("\n\t . . . Datos cargados! . . .");
+						
+					utilidad.mensaje("Los datos se cargaron al sistema exitosamente!");	
 					}
 					
 				}
 		
 			} else {
-				System.out.println(("\n\t . . . El archivo no existe !! . . ."));
+				utilidad.mensaje("\nEl archivo no existe !!");
+				
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

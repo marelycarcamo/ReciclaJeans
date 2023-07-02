@@ -1,5 +1,6 @@
 package cl.marely;
 
+import java.util.Scanner;
 
 public class Utilidad {
 	
@@ -23,7 +24,17 @@ public class Utilidad {
 	}
 
 
-
+	@SuppressWarnings("resource")
+	public void mensaje(String msje) {
+		Scanner scx = new Scanner(System.in);
+		System.out.println("\n\n\t---------------------------------------------------------------------------------------------------");
+		System.out.println("                        < < < " + msje + " > > >");
+		System.out.println("\t----------------------------------------------------------------------------------------------------\n\n");
+		
+//		System.out.println("\tPresione una tecla para continuar...");
+//		scx.nextLine();
+		System.out.println("\n\n\n\n");
+	}
 	
 
 	
